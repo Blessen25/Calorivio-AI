@@ -14,7 +14,7 @@ const Home_Comp = () => {
 
             <div className="layout">
                 <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-                    
+                    <a href="#" className="logo">CALORIVIO</a>
                 </div>
                 <div className="main_dashboard">
 

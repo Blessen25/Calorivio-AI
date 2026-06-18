@@ -10,6 +10,7 @@
     background-color: rgb(27, 27, 27);
     border-right: 1px solid rgb(85, 85, 85);
     transition: width 0.3s ease;
+    padding: 20px; 
 }
 
 .sidebar.collapsed {
@@ -22,3 +23,4 @@
     flex: 1;
     background-color: rgb(27, 27, 27);
 }
+

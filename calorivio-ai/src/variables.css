@@ -1,0 +1,9 @@
+:root {
+  --bg-main: rgb(27, 27, 27);
+  --bg-sidebar: rgb(23, 23, 23);
+  --bg-hover: rgb(47, 47, 47);
+  --text-main: rgb(236, 236, 236);
+  --text-muted: rgb(180, 180, 180);
+  --border-color: rgb(48, 48, 48);
+  --accent-green: rgb(16, 163, 127);
+}
