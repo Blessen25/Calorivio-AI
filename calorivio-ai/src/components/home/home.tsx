@@ -20,10 +20,6 @@ const Home_Comp = () => {
 
   const menuItems = [
     {
-      label: "Dashboard",
-      icon: "fa-table-columns",
-    },
-    {
       label: "AI Nutrition Chat",
       icon: "fa-comment-dots",
     },
@@ -38,10 +34,6 @@ const Home_Comp = () => {
     {
       label: "Progress",
       icon: "fa-chart-line",
-    },
-    {
-      label: "Profile",
-      icon: "fa-user",
     },
   ];
 
@@ -70,17 +62,6 @@ const Home_Comp = () => {
           ))}
         </nav>
 
-        <div className="sidebar_bottom">
-          <button className="nav_item">
-            <i className="fa-solid fa-gear"></i>
-            {showText && <span>Settings</span>}
-          </button>
-
-          <button className="nav_item">
-            <i className="fa-solid fa-right-from-bracket"></i>
-            {showText && <span>Logout</span>}
-          </button>
-        </div>
       </aside>
 
       <main className="main_dashboard">
