@@ -1,0 +1,88 @@
+.profile_page {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_card {
+  width: 100%;
+  max-width: 560px;
+  background: rgb(35, 35, 35);
+  border: 1px solid rgb(55, 55, 55);
+  border-radius: 22px;
+  padding: 32px;
+  color: white;
+}
+
+.profile_card h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.profile_card p {
+  margin-bottom: 24px;
+  color: rgb(170, 170, 170);
+}
+
+.profile_form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.profile_form input,
+.profile_form select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(27, 27, 27);
+  color: white;
+  outline: none;
+}
+
+.profile_form input:focus,
+.profile_form select {
+  width: 100%;
+  padding: 14px 40px 14px 14px; /* extra space on right */
+  border-radius: 12px;
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(27, 27, 27);
+  color: white;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5 8 12l6.5-6.5' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.profile_save_btn {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #10a37f;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile_save_btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .profile_card {
+    padding: 22px;
+  }
+
+  .profile_card h1 {
+    font-size: 26px;
+  }
+}
