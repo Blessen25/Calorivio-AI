@@ -1,0 +1,75 @@
+.edit_profile_page {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.edit_profile_card {
+  width: 100%;
+  max-width: 620px;
+  background-color: rgb(35, 35, 35);
+  border: 1px solid rgb(55, 55, 55);
+  border-radius: 24px;
+  padding: 35px;
+  color: white;
+}
+
+.edit_profile_card p {
+  color: rgb(170, 170, 170);
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.edit_profile_form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form_group label {
+  color: rgb(210, 210, 210);
+}
+
+.form_group input,
+.form_group select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgb(70, 70, 70);
+  background-color: rgb(27, 27, 27);
+  color: white;
+  outline: none;
+}
+
+.form_group input:focus,
+.form_group select:focus {
+  border-color: #10a37f;
+}
+
+.save_profile_btn {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background-color: #10a37f;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .edit_profile_page {
+    padding: 16px;
+  }
+
+  .edit_profile_card {
+    padding: 24px;
+  }
+}

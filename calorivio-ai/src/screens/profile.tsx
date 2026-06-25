@@ -1,5 +1,4 @@
-import "./profile.css";
-
+import './styles/profile.css';
 const Profile = () => {
   return (
     <div className="profile_page">
@@ -11,7 +10,7 @@ const Profile = () => {
           </div>
 
           <div>
-            <h1 className="heading-3 font-w-700">
+            <h1 className="heading-5 font-w-700">
               Blessen Vinoy Mathew
             </h1>
 
@@ -86,7 +85,7 @@ const Profile = () => {
         </div>
 
         <div className="profile_actions">
-          <button className="edit_btn text-md font-w-600">
+          <button className="edit_btn text-md font-w-600" onClick={() => window.location.href = '/edit-profile'}>
             <i className="fa-solid fa-pen"></i>
             Edit Profile
           </button>
