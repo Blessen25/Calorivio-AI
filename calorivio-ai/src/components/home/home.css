@@ -6,6 +6,7 @@
 
 .sidebar {
   width: 260px;
+  height: 100vh;
   background: rgb(23, 23, 23);
   border-right: 1px solid rgb(55, 55, 55);
   transition: all 0.3s ease;
@@ -27,63 +28,55 @@
 
 .logo {
   color: white;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.icon_btn,
+.new_chat_btn,
+.nav_item {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .icon_btn {
-  background: transparent;
-  border: none;
-  color: white;
   width: 42px;
   height: 42px;
-  border-radius: 10px;
-  cursor: pointer;
+  font-size: 18px;
 }
 
-.icon_btn:hover {
-  background: rgb(47, 47, 47);
-}
-
-.new_chat_btn {
+.new_chat_btn,
+.nav_item {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 12px;
-  border: none;
-  background: transparent;
-  color: white;
   padding: 12px;
-  border-radius: 10px;
-  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
 }
 
-.new_chat_btn:hover {
+.icon_btn:hover,
+.new_chat_btn:hover,
+.nav_item:hover,
+.nav_item.active {
   background: rgb(47, 47, 47);
+}
+
+.nav_item i,
+.new_chat_btn i {
+  min-width: 18px;
 }
 
 .nav_links {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-top: 10px;
-}
-
-.nav_item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border: none;
-  background: transparent;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.nav_item:hover {
-  background: rgb(47, 47, 47);
-}
-
-.nav_item i {
-  min-width: 18px;
+  margin-top: 12px;
 }
 
 .sidebar_bottom {
@@ -94,27 +87,33 @@
 
 .main_dashboard {
   flex: 1;
+  min-height: 100vh;
+  background: rgb(27, 27, 27);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px;
 }
 
 .chat_container {
   width: 100%;
   max-width: 800px;
-  padding: 20px;
 }
 
 .chat_container h1 {
-  color: white;
   text-align: center;
   margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 500;
 }
 
 .chat_box {
   display: flex;
   align-items: center;
+  gap: 12px;
   background: rgb(47, 47, 47);
+  border: 1px solid rgb(65, 65, 65);
   border-radius: 18px;
   padding: 12px;
 }
@@ -125,23 +124,83 @@
   border: none;
   outline: none;
   color: white;
+  font-size: 15px;
+}
+
+.chat_box input::placeholder {
+  color: rgb(170, 170, 170);
 }
 
 .chat_box button {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.nav_item.active {
-  background-color: rgb(47, 47, 47);
-}
-
 .page_content {
-  color: white;
   width: 100%;
   max-width: 900px;
-  padding: 30px;
+  color: white;
+}
+
+.page_content h1 {
+  margin-bottom: 10px;
+}
+
+.page_content p {
+  color: rgb(180, 180, 180);
+}
+
+.profile_form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  max-width: 500px;
+}
+
+.profile_form input,
+.profile_form select {
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid rgb(70, 70, 70);
+  background: rgb(40, 40, 40);
+  color: white;
+  outline: none;
+}
+
+.profile_form input:focus,
+.profile_form select:focus {
+  border-color: #10a37f;
+}
+
+.save_btn {
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #10a37f;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.save_btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 100;
+  }
+
+  .main_dashboard {
+    padding: 20px;
+  }
+
+  .chat_container h1 {
+    font-size: 24px;
+  }
 }

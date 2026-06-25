@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./home.css";
-import Chat from "../../screens/chat";
 
+import Chat from "../../screens/chat";
+import Profile from "../../screens/profile";
 
 const Home_Comp = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -14,34 +15,15 @@ const Home_Comp = () => {
       setCollapsed(true);
     } else {
       setCollapsed(false);
-
-      setTimeout(() => {
-        setShowText(true);
-      }, 200);
+      setTimeout(() => setShowText(true), 200);
     }
   };
 
   const menuItems = [
-    {
-      label: "AI Nutrition Chat",
-      icon: "fa-comment-dots",
-      page: "chat",
-    },
-    {
-      label: "Meal Plans",
-      icon: "fa-utensils",
-      page: "mealPlans",
-    },
-    {
-      label: "BMI Calculator",
-      icon: "fa-calculator",
-      page: "bmi",
-    },
-    {
-      label: "Progress",
-      icon: "fa-chart-line",
-      page: "progress",
-    },
+    { label: "AI Nutrition Chat", icon: "fa-comment-dots", page: "chat" },
+    { label: "Meal Plans", icon: "fa-utensils", page: "mealPlans" },
+    { label: "BMI Calculator", icon: "fa-calculator", page: "bmi" },
+    { label: "Progress", icon: "fa-chart-line", page: "progress" },
   ];
 
   return (
@@ -63,8 +45,8 @@ const Home_Comp = () => {
         <nav className="nav_links">
           {menuItems.map((item) => (
             <button
-              className={`nav_item ${activePage === item.page ? "active" : ""}`}
               key={item.label}
+              className={`nav_item ${activePage === item.page ? "active" : ""}`}
               onClick={() => setActivePage(item.page)}
             >
               <i className={`fa-solid ${item.icon}`}></i>
@@ -72,10 +54,21 @@ const Home_Comp = () => {
             </button>
           ))}
         </nav>
+
+        <div className="sidebar_bottom">
+          <button
+            className={`nav_item ${activePage === "profile" ? "active" : ""}`}
+            onClick={() => setActivePage("profile")}
+          >
+            <i className="fa-solid fa-circle-user"></i>
+            {showText && <span>Profile</span>}
+          </button>
+        </div>
       </aside>
 
       <main className="main_dashboard">
         {activePage === "chat" && <Chat />}
+        {activePage === "profile" && <Profile />}
 
         {activePage === "mealPlans" && (
           <div className="page_content">
