@@ -4,42 +4,94 @@ const Profile = () => {
   return (
     <div className="profile_page">
       <div className="profile_card">
-        <h1>Profile</h1>
-        <p>Tell Calorivio about you for better meal plans.</p>
 
-        <form className="profile_form">
-          <input type="text" placeholder="Full Name" />
-          <input type="number" placeholder="Age" />
+        <div className="profile_header">
+          <div className="profile_avatar">
+            <i className="fa-solid fa-user"></i>
+          </div>
 
-          <select>
-            <option>Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-          </select>
+          <div>
+            <h1 className="heading-3 font-w-700">
+              Blessen Vinoy Mathew
+            </h1>
 
-          <input type="number" placeholder="Height (cm)" />
-          <input type="number" placeholder="Current Weight (kg)" />
-          <input type="number" placeholder="Target Weight (kg)" />
+            <p className="text-md font-w-400">
+              Personal Nutrition Profile
+            </p>
+          </div>
+        </div>
 
-          <select>
-            <option>Activity Level</option>
-            <option>Sedentary</option>
-            <option>Lightly Active</option>
-            <option>Moderately Active</option>
-            <option>Very Active</option>
-          </select>
+        <div className="profile_stats">
 
-          <select>
-            <option>Goal</option>
-            <option>Weight Loss</option>
-            <option>Muscle Gain</option>
-            <option>Maintenance</option>
-          </select>
+          <div className="stat_card">
+            <span className="text-sm font-w-400">
+              Age
+            </span>
 
-          <button type="button" className="profile_save_btn">
-            Save Profile
+            <h3 className="heading-5 font-w-600">
+              25 Years
+            </h3>
+          </div>
+
+          <div className="stat_card">
+            <span className="text-sm font-w-400">
+              Height
+            </span>
+
+            <h3 className="heading-5 font-w-600">
+              179 cm
+            </h3>
+          </div>
+
+          <div className="stat_card">
+            <span className="text-sm font-w-400">
+              Current Weight
+            </span>
+
+            <h3 className="heading-5 font-w-600">
+              91 kg
+            </h3>
+          </div>
+
+          <div className="stat_card">
+            <span className="text-sm font-w-400">
+              Target Weight
+            </span>
+
+            <h3 className="heading-5 font-w-600">
+              75 kg
+            </h3>
+          </div>
+
+          <div className="stat_card">
+            <span className="text-sm font-w-400">
+              Goal
+            </span>
+
+            <h3 className="heading-5 font-w-600">
+              Weight Loss
+            </h3>
+          </div>
+
+          <div className="stat_card">
+            <span className="text-sm font-w-400">
+              Weight To Lose
+            </span>
+
+            <h3 className="heading-5 font-w-600">
+              16 kg
+            </h3>
+          </div>
+
+        </div>
+
+        <div className="profile_actions">
+          <button className="edit_btn text-md font-w-600">
+            <i className="fa-solid fa-pen"></i>
+            Edit Profile
           </button>
-        </form>
+        </div>
+
       </div>
     </div>
   );

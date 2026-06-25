@@ -190,17 +190,110 @@
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
+.mobile_header {
+  display: none;
+}
+
+.mobile_overlay {
+  display: none;
+}
+
+.mobile_close_btn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .app_layout {
+    display: block;
+  }
+
+  .mobile_header {
+    height: 60px;
+    width: 100%;
+    background: rgb(23, 23, 23);
+    border-bottom: 1px solid rgb(55, 55, 55);
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 0 16px;
+    color: white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+  }
+
+  .mobile_header h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .mobile_menu_btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .mobile_overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 250;
+  }
+
   .sidebar {
     position: fixed;
-    z-index: 100;
+    top: 0;
+    left: -280px;
+
+    width: 260px;
+    height: 100vh;
+
+    z-index: 300;
+
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.mobile_open {
+    left: 0;
+  }
+
+  .sidebar.collapsed {
+    width: 260px;
+  }
+
+  .desktop_toggle {
+    display: none;
+  }
+
+  .mobile_close_btn {
+    display: block;
+    margin-left: auto;
+
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .logo,
+  .nav_item span,
+  .new_chat_btn span {
+    display: inline;
   }
 
   .main_dashboard {
-    padding: 20px;
-  }
-
-  .chat_container h1 {
-    font-size: 24px;
+    min-height: 100vh;
+    padding: 80px 16px 20px;
+    width: 100%;
   }
 }
+
+
